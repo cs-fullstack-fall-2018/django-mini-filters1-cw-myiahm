@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from filter_app1.models import ToDo
+from .models import ToDo
 
 
 # Create your views here.

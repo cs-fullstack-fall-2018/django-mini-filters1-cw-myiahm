@@ -8,16 +8,20 @@
 {% load app_filters %}
 
 
+
 <h1>Stuff I need To Do!</h1>
 {% for todo in todos %}
 <p>
 <div class='todo'>
     <b>{{todo.name}}</b>
 </div>
+<div style='border: 2px solid '> {{todo.due_date|get_due_date_color}}
+    {{todo.name}}</div>
+
 <div class='due_date'>
     <b>Due:</b> {{ todo.due_date | get_due_date_string }}
 </div>
-</p>
+
 {% endfor %}
 </body>
 </html>
