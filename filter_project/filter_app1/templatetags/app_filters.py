@@ -24,10 +24,10 @@ def get_due_date_string(value):
 def get_due_date_color(value):
     delta = value - date.today()
 
-    if delta.days < 1:
-        return ""
-    elif delta.days <= 3:
-        return ""
-    else:
-        return "Green"
+    if delta.days == 0:
+        return "green"
+    elif delta.days < 1:
+        return "red"
+    elif delta.days > 1:
+        return "orange"
 
